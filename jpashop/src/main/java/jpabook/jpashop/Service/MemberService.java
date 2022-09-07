@@ -45,4 +45,10 @@ public class MemberService {
     public Member findOne(Long id) {
         return memberRepository.findOne(id);
     }
+
+    @Transactional //있어야 쓰기 가능
+    public void update(Long id, String name) {
+        Member member = memberRepository.findOne(id); //영속 콘텍스트 갖고옴
+        member.setName(name); //Transaction끝나는 시점에 영속 콘텍스트 변경 감지
+    }
 }
