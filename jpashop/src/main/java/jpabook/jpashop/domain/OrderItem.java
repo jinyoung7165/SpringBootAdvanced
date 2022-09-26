@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jpabook.jpashop.domain.Item.Item;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,6 +21,7 @@ public class OrderItem {
     @JoinColumn(name = "item_id") //item과 맵핑
     private Item item; //연관관계의 주인
 
+    @JsonIgnore //양방향 관계 -> 한쪽에 jsonignore하지않으면 무한으로 객체를 찾아나감
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id") //order과 맵핑
     private Order order; //연관관계의 주인
