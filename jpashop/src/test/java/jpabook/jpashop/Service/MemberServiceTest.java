@@ -53,7 +53,7 @@ public class MemberServiceTest {
         memberService.join(member1);
         memberService.join(member2); //예외가 발생한다
         
-        //fail("예외가 발생해야 한다"); //위에서 예상한대로 예외 안 생기면 fail실행
+        fail("예외가 발생해야 한다"); //위에서 예상한대로 예외 안 생기면 fail실행
 
 
     }

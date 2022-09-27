@@ -10,11 +10,9 @@ spring:
       ddl-auto:  create #가진 엔티티 app실행할 때마다 지울 것
     properties:
       hibernate: #객체와 RDBMS를 매핑하는 orm(jpa의 구현체)
-      # show_sql: true - 콘솔로 안찍고 로깅할 것
+        # show_sql: true - 콘솔로 안찍고 로깅할 것
         format_sql: true
 logging:
   level:
     org.hibernate.SQL: debug
     #org.hibernate.type: trace (parameter까지 보여줌)
-
-
