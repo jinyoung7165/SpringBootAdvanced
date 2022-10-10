@@ -17,6 +17,7 @@ public class OrderItem {
     @Column(name = "order_item_id")
     private Long id;
 
+    //단방향
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id") //item과 맵핑
     private Item item; //연관관계의 주인

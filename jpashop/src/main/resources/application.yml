@@ -12,7 +12,8 @@ spring:
       hibernate: #객체와 RDBMS를 매핑하는 orm(jpa의 구현체)
         # show_sql: true - 콘솔로 안찍고 로깅할 것
         format_sql: true
+        default_batch_fetch_size: 100
 logging:
   level:
     org.hibernate.SQL: debug
-    #org.hibernate.type: trace (parameter까지 보여줌)
+    org.hibernate.type: trace #(parameter까지 보여줌)
